@@ -12,9 +12,10 @@ $posts = $db->query("
 
 
 $data = '<?xml version="1.0" encoding="ISO-8859-1"?>';
-$data .= '<rss version="2.0">';
+$data .= '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">';
 $data .= '<channel>';
 $data .= '<title>CODELAB</title>';
+$data .= '<atom:link href="'.BASE_URL.'/rss/" rel="self" type="application/rss+xml"/>';
 $data .= '<link>'.BASE_URL.'/</link>';
 $data .= '<description>Resource Blog For Coders</description>';
 foreach ($posts as $post) {
