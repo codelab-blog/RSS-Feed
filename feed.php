@@ -20,10 +20,10 @@ $data .= '<description>Resource Blog For Coders</description>';
 foreach ($posts as $post) {
     $data .= '<item>';
     $data .= '<title>'.htmlentities($post['title']).'</title>';
-		$data .= '<link>'.BASE_URL.'/post/'.$post['slug'].'</link>';
-		$data .= '<guid>'.BASE_URL.'/post/'.$post['slug'].'</guid>';
-		$data .= '<pubDate>'.date(DATE_RSS, strtotime($post['date'])).'</pubDate>';
-		$data .= '<description><![CDATA['.$post['subtitle'].'<a href="'.BASE_URL.'/post/'.$post['slug'].'">Read Full Post</a>]]></description>';
+    $data .= '<link>'.BASE_URL.'/post/'.$post['slug'].'</link>';
+    $data .= '<guid>'.BASE_URL.'/post/'.$post['slug'].'</guid>';
+    $data .= '<pubDate>'.date(DATE_RSS, strtotime($post['date'])).'</pubDate>';
+    $data .= '<description><![CDATA['.$post['subtitle'].'<a href="'.BASE_URL.'/post/'.$post['slug'].'">Read Full Post</a>]]></description>';
     $data .= '</item>';
 }
 $data .= '</channel>';
